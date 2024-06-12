@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=7 format=3 uid="uid://c3kard8gwxb4k"]
+
+[ext_resource type="Script" path="res://Scripts/Skill Data/SkillData.gd" id="1_7bf7j"]
+[ext_resource type="Texture2D" uid="uid://cg8rewa8xd72j" path="res://Imported Assets/Captaincatsparrow Druid Free Icons/Druid_15.png" id="1_wuhvi"]
+[ext_resource type="Script" path="res://Scripts/Skill Data/SkillTier.gd" id="3_i6bo3"]
+
+[sub_resource type="Resource" id="Resource_yvwh7"]
+script = ExtResource("3_i6bo3")
+power_scale = 1.0
+
+[sub_resource type="Resource" id="Resource_wmjxi"]
+script = ExtResource("3_i6bo3")
+power_scale = 1.0
+
+[sub_resource type="Resource" id="Resource_64kpu"]
+script = ExtResource("3_i6bo3")
+power_scale = 1.0
+
+[resource]
+script = ExtResource("1_7bf7j")
+localization_name = "Screech"
+localization_description = "New description."
+display_icon = ExtResource("1_wuhvi")
+is_passive = false
+tiers = Array[ExtResource("3_i6bo3")]([SubResource("Resource_yvwh7"), SubResource("Resource_wmjxi"), SubResource("Resource_64kpu")])
+is_starting_skill = false
+minimum_rank_of_previous = 0
+unlocks_at_class_level = 0

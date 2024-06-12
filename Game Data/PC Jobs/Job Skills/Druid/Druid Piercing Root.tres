@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=6 format=3 uid="uid://drxkd14vevofe"]
+
+[ext_resource type="Script" path="res://Scripts/Skill Data/SkillData.gd" id="1_72toh"]
+[ext_resource type="Texture2D" uid="uid://dhol0belop6vm" path="res://Imported Assets/Captaincatsparrow Druid Free Icons/Druid_7.png" id="1_qgub6"]
+[ext_resource type="Script" path="res://Scripts/Skill Data/SkillTier.gd" id="3_njyu0"]
+
+[sub_resource type="Resource" id="Resource_w8ox1"]
+script = ExtResource("3_njyu0")
+power_scale = 1.0
+
+[sub_resource type="Resource" id="Resource_1abe0"]
+script = ExtResource("3_njyu0")
+power_scale = 1.1
+
+[resource]
+script = ExtResource("1_72toh")
+localization_name = "Piercing Root"
+localization_description = "A root that can cut through a target."
+display_icon = ExtResource("1_qgub6")
+is_passive = false
+tiers = Array[ExtResource("3_njyu0")]([SubResource("Resource_w8ox1"), SubResource("Resource_1abe0")])
+is_starting_skill = true
+minimum_rank_of_previous = 0
+unlocks_at_class_level = 0

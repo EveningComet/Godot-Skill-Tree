@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=5 format=3 uid="uid://cijc6uuselpj1"]
+
+[ext_resource type="Texture2D" uid="uid://b4pl0dd6aok1t" path="res://Imported Assets/Captaincatsparrow Druid Free Icons/Druid_6.png" id="1_j2klk"]
+[ext_resource type="Script" path="res://Scripts/Skill Data/SkillData.gd" id="2_hvbmc"]
+[ext_resource type="Script" path="res://Scripts/Skill Data/SkillTier.gd" id="3_3uudx"]
+
+[sub_resource type="Resource" id="Resource_v3rqk"]
+script = ExtResource("3_3uudx")
+power_scale = 1.0
+
+[resource]
+script = ExtResource("2_hvbmc")
+localization_name = "Seed Bomb"
+localization_description = "New description."
+display_icon = ExtResource("1_j2klk")
+is_passive = false
+tiers = Array[ExtResource("3_3uudx")]([SubResource("Resource_v3rqk")])
+is_starting_skill = false
+minimum_rank_of_previous = 0
+unlocks_at_class_level = 0

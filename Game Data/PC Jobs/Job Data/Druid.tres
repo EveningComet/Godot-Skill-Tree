@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://dprkbjdufthk4"]
+
+[ext_resource type="Script" path="res://Scripts/Character/Job.gd" id="1_a41n2"]
+[ext_resource type="PackedScene" uid="uid://c463px1jq0j72" path="res://Scenes/Skill Menu/Job Skill Trees/Druid Skill Tree.tscn" id="2_ojkkp"]
+
+[resource]
+script = ExtResource("1_a41n2")
+localization_name = "Druid"
+localization_description = "They do be cool."
+skill_tree_prefab = ExtResource("2_ojkkp")
