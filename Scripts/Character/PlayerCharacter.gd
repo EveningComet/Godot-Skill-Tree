@@ -7,4 +7,7 @@ class_name PlayerCharacter extends Node
 @export var class_level: int = 1
 @export var available_skill_points: int = 6
 
-var skill_instance_holder: SkillInstanceHolder
+var skill_holder: SkillHolder = SkillHolder.new()
+
+func _ready() -> void:
+	skill_holder.add_job_skills(job)

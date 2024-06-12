@@ -1,10 +1,17 @@
-[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://dprkbjdufthk4"]
+[gd_resource type="Resource" script_class="Job" load_steps=7 format=3 uid="uid://dprkbjdufthk4"]
 
 [ext_resource type="Script" path="res://Scripts/Character/Job.gd" id="1_a41n2"]
 [ext_resource type="PackedScene" uid="uid://c463px1jq0j72" path="res://Scenes/Skill Menu/Job Skill Trees/Druid Skill Tree.tscn" id="2_ojkkp"]
+[ext_resource type="Resource" uid="uid://cijc6uuselpj1" path="res://Game Data/PC Jobs/Job Skills/Druid/Druid Seed Bomb.tres" id="3_3hqyh"]
+[ext_resource type="Resource" uid="uid://c3kard8gwxb4k" path="res://Game Data/PC Jobs/Job Skills/Druid/Druid Screech.tres" id="4_1nw41"]
+[ext_resource type="Resource" uid="uid://drxkd14vevofe" path="res://Game Data/PC Jobs/Job Skills/Druid/Druid Piercing Root.tres" id="5_nsdwn"]
+[ext_resource type="Resource" uid="uid://bpdr08ke4wsym" path="res://Game Data/PC Jobs/Job Skills/Druid/Druid Bark Skin.tres" id="6_uxi0d"]
 
 [resource]
 script = ExtResource("1_a41n2")
 localization_name = "Druid"
 localization_description = "They do be cool."
+file_path_to_job_skills = "res://Game Data/PC Jobs/Job Skills/Druid/"
+update_attached_skills = false
+skills = Array[Resource("res://Scripts/Skill Data/SkillData.gd")]([ExtResource("3_3hqyh"), ExtResource("4_1nw41"), ExtResource("5_nsdwn"), ExtResource("6_uxi0d")])
 skill_tree_prefab = ExtResource("2_ojkkp")

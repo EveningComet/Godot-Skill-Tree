@@ -35,6 +35,10 @@ func set_associated_skill(new_skill: SkillData) -> void:
 	display_icon.set_texture(associated_skill.display_icon)
 	turn_off()
 
+func set_instanced_skill(instance: SkillInstance) -> void:
+	skill_instance = instance
+	update_rank_label(skill_instance.curr_rank)
+
 ## Make the line draw to another node.
 func draw_point_to(point_to: Vector2) -> void:
 	line_2d.add_point(global_position + size / 2)
@@ -47,3 +51,7 @@ func update_rank_label(new_rank: int) -> void:
 func turn_off() -> void:
 	disabled = true
 	display_icon.self_modulate = inactive_color
+
+func turn_on() -> void:
+	disabled = false
+	display_icon.self_modulate = active_color

@@ -36,6 +36,9 @@ func update_displayed_job(new_job: Job) -> void:
 	# TODO: Delete the previously spawned tree before spawning the new one.
 	var skill_tree: SkillTree = new_job.skill_tree_prefab.instantiate()
 	skill_tree_holder.add_child(skill_tree)
+	
+	# Hook up the skills
+	skill_tree.combine_instances_to_nodes(curr_character.skill_holder.get_all_skills())
 
 func on_undo_skill_points_button_pressed() -> void:
 	# Go through the alloted history and undo the upgrades the player made

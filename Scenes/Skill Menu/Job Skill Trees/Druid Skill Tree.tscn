@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c463px1jq0j72"]
+[gd_scene load_steps=7 format=3 uid="uid://c463px1jq0j72"]
 
 [ext_resource type="Script" path="res://Scripts/UI/Skil Menu/SkillTree.gd" id="1_or2ji"]
 [ext_resource type="PackedScene" uid="uid://1ls8oloyl225" path="res://Scenes/Skill Menu/Skill Node.tscn" id="2_nmme2"]
 [ext_resource type="Resource" uid="uid://drxkd14vevofe" path="res://Game Data/PC Jobs/Job Skills/Druid/Druid Piercing Root.tres" id="3_kliso"]
 [ext_resource type="Resource" uid="uid://cijc6uuselpj1" path="res://Game Data/PC Jobs/Job Skills/Druid/Druid Seed Bomb.tres" id="4_7j7ks"]
+[ext_resource type="Resource" uid="uid://bpdr08ke4wsym" path="res://Game Data/PC Jobs/Job Skills/Druid/Druid Bark Skin.tres" id="5_8u8x6"]
 [ext_resource type="Resource" uid="uid://c3kard8gwxb4k" path="res://Game Data/PC Jobs/Job Skills/Druid/Druid Screech.tres" id="5_kswdd"]
 
 [node name="Druid Skill Tree" type="Control"]
@@ -28,6 +29,14 @@ offset_top = -87.0
 offset_right = 187.0
 offset_bottom = -23.0
 associated_skill = ExtResource("4_7j7ks")
+
+[node name="Bark Skin" parent="Piercing Root/Seed Bomb" instance=ExtResource("2_nmme2")]
+layout_mode = 0
+offset_left = 142.0
+offset_top = -1.0
+offset_right = 206.0
+offset_bottom = 63.0
+associated_skill = ExtResource("5_8u8x6")
 
 [node name="Screech" parent="Piercing Root" instance=ExtResource("2_nmme2")]
 layout_mode = 0
