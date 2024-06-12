@@ -9,7 +9,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_22mhn")
-skill_tree_holder = NodePath("")
+skill_tree_holder = NodePath("ScrollContainer")
 skill_points_value_label = NodePath("HBoxContainer/Skill Points Value Label")
 undo_skill_points_button = NodePath("Undo Skill Points Button")
 
