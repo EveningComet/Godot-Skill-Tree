@@ -29,8 +29,6 @@ func update_character_to_manage(new_char: PlayerCharacter) -> void:
 	update_displayed_job(curr_character.job)
 	undo_skill_points_button.disabled = curr_character.available_skill_points == 0
 	skill_points_value_label.set_text( str(curr_character.available_skill_points) )
-	if OS.is_debug_build() == true:
-		print("SkillMenu :: New character to display. Updating.")
 
 func update_displayed_job(new_job: Job) -> void:
 	# TODO: Delete the previously spawned tree before spawning the new one.

@@ -2,6 +2,11 @@
 class_name SkillTree extends Control
 # TODO: Rename this to be something more generic and reusable?
 
+var existing_skill_nodes: Array[SkillNode]
+
+func _ready() -> void:
+	existing_skill_nodes = get_all_existing_nodes_within()
+
 ## A quick and dirty way of getting all the skill nodes attached to a skill tree.
 func get_all_existing_nodes_within(branch: Control = self) -> Array[SkillNode]:
 	var all_contained_skill_nodes: Array[SkillNode] = []
@@ -14,14 +19,15 @@ func get_all_existing_nodes_within(branch: Control = self) -> Array[SkillNode]:
 
 ## Taking a collection of instanced skills, hook them up with the correct skill.
 func combine_instances_to_nodes(instanced_skills: Array[SkillInstance]) -> void:
-	var existing_skill_nodes: Array[SkillNode] = get_all_existing_nodes_within()
+	var temp: Array[SkillNode]
+	temp.append_array(existing_skill_nodes)
 	if OS.is_debug_build() == true:
 		print("SkillTree :: %s has a total node skill node count of: %s" %[name, existing_skill_nodes.size()])
 	
 	for instance: SkillInstance in instanced_skills:
-		for n in existing_skill_nodes:
+		for n in temp:
 			if instance.skill == n.associated_skill:
 				n.set_instanced_skill(instance)
-				existing_skill_nodes.erase(n)
+				temp.erase(n)
 				n.turn_on()
 				continue
