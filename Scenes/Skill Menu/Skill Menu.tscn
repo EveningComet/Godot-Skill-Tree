@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0qgjv46qmy6l"]
+[gd_scene load_steps=3 format=3 uid="uid://d0qgjv46qmy6l"]
 
 [ext_resource type="Script" path="res://Scripts/UI/Skil Menu/SkillMenu.gd" id="1_22mhn"]
+[ext_resource type="Script" path="res://Scripts/UI/Skil Menu/SkillMenuUpgradeHandler.gd" id="2_b0v3k"]
 
 [node name="Skill Menu" type="Control" node_paths=PackedStringArray("skill_tree_holder", "skill_points_value_label", "undo_skill_points_button")]
 custom_minimum_size = Vector2(1200, 800)
@@ -70,3 +71,6 @@ grow_vertical = 2
 follow_focus = true
 horizontal_scroll_mode = 3
 vertical_scroll_mode = 3
+
+[node name="SkillMenuUpgradeHandler" type="Node" parent="."]
+script = ExtResource("2_b0v3k")

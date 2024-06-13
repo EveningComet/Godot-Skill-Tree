@@ -1,6 +1,10 @@
 ## Allows a player to interact with unlocking a particular skill.
 class_name SkillNode extends Button
 
+signal upgraded(skill_node: SkillNode)
+
+const implements = [preload("res://Scripts/UI/Skil Menu/UIUpgradable.gd")]
+
 ## The skill that this button is tied to.
 @export var associated_skill: SkillData
 
@@ -24,6 +28,8 @@ func _ready() -> void:
 	set_associated_skill(associated_skill)
 	if get_parent() is SkillNode:
 		draw_point_to(get_parent().global_position + size / 2)
+	
+	button_down.connect( on_skill_button_down )
 
 func set_associated_skill(new_skill: SkillData) -> void:
 	associated_skill = new_skill
@@ -55,3 +61,28 @@ func turn_off() -> void:
 func turn_on() -> void:
 	disabled = false
 	display_icon.self_modulate = active_color
+
+## Works as a mediator to handle upgrades.
+func on_skill_button_down() -> void:
+	upgrade()
+
+func upgrade() -> void:
+	if skill_instance.is_max_rank() == true:
+		return
+		
+	skill_instance.upgrade()
+	update_rank_label( skill_instance.curr_rank )
+	
+	# See what nodes should be unlocked
+	for c in get_children():
+		if c is SkillNode:
+			var n = c as SkillNode
+			if skill_instance.curr_rank >= n.associated_skill.minimum_rank_of_previous:
+				n.turn_on()
+	
+	upgraded.emit(self)
+
+func downgrade() -> void:
+	# TODO: See what nodes need to be relocked
+	skill_instance.downgrade()
+	update_rank_label( skill_instance.curr_rank )
