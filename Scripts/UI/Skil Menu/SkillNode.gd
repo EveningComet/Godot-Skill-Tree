@@ -64,7 +64,7 @@ func turn_on() -> void:
 
 ## Works as a mediator to handle upgrades.
 func on_skill_button_down() -> void:
-	upgrade()
+	upgraded.emit(self)
 
 func upgrade() -> void:
 	if skill_instance.is_max_rank() == true:
@@ -79,8 +79,6 @@ func upgrade() -> void:
 			var n = c as SkillNode
 			if skill_instance.curr_rank >= n.associated_skill.minimum_rank_of_previous:
 				n.turn_on()
-	
-	upgraded.emit(self)
 
 func downgrade() -> void:
 	# TODO: See what nodes need to be relocked
