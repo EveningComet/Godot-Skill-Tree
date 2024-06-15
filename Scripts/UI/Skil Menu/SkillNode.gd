@@ -81,6 +81,12 @@ func upgrade() -> void:
 				n.turn_on()
 
 func downgrade() -> void:
-	# TODO: See what nodes need to be relocked
 	skill_instance.downgrade()
 	update_rank_label( skill_instance.curr_rank )
+	
+	# See what nodes need to be relocked
+	for c in get_children():
+		if c is SkillNode:
+			var n = c as SkillNode
+			if skill_instance.curr_rank < n.associated_skill.minimum_rank_of_previous:
+				n.turn_off()

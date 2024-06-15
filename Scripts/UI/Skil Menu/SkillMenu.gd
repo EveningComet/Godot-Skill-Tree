@@ -54,7 +54,13 @@ func on_undo_skill_points_button_pressed() -> void:
 	while alloted_history.is_empty() == false:
 		var upgrade_to_remove = alloted_history.pop_back()
 		if upgrade_to_remove is SkillNode:
-			pass
+			var skill_node: SkillNode = upgrade_to_remove as SkillNode
+			skill_node.downgrade()
+		draft_points += 1
+		update_available_skill_points_display(draft_points)
+	
+	if OS.is_debug_build() == true:
+		print("SkillMenu :: Pressed undo distribution.")
 
 func hookup_upgrade_nodes() -> void:
 	var existing_skill_nodes = skill_tree.existing_skill_nodes
