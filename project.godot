@@ -14,7 +14,7 @@ config/name="Godot Skill Tree"
 config/description="Example of a skill tree in Godot."
 run/main_scene="res://Scenes/Game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Imported Assets/Icon/tree-branch.svg"
 
 [autoload]
 
