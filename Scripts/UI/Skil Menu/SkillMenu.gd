@@ -42,8 +42,9 @@ func update_displayed_job(new_job: Job) -> void:
 	skill_tree = new_job.skill_tree_prefab.instantiate()
 	skill_tree_holder.add_child(skill_tree)
 	skill_tree_holder.reset_size()
-	var y_margins = skill_tree_holder.get_combined_minimum_size().y - skill_tree_holder.get_size().y
-	skill_tree_holder.custom_minimum_size.y = min(skill_tree_holder.get_parent().get_size().y, skill_tree_holder.get_parent().get_size().y - y_margins)
+	var scroll_container = skill_tree_holder.get_parent()
+	await get_tree().process_frame
+	scroll_container.scroll_vertical = scroll_container.get_v_scroll_bar().max_value
 	
 	# Hook up the skills and subscribe to relevant events
 	skill_tree.combine_instances_to_nodes(curr_character.skill_holder.get_all_skills())

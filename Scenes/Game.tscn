@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://diiwextwdby66"]
+[gd_scene load_steps=5 format=3 uid="uid://diiwextwdby66"]
 
 [ext_resource type="Script" path="res://Scripts/Character/PlayerCharacter.gd" id="1_xr1kb"]
 [ext_resource type="Resource" uid="uid://dprkbjdufthk4" path="res://Game Data/PC Jobs/Job Data/Druid.tres" id="2_mxxni"]
+[ext_resource type="Resource" uid="uid://b3gdkx1wumxpo" path="res://Game Data/PC Jobs/Job Data/Warlock.tres" id="3_ft244"]
 [ext_resource type="PackedScene" uid="uid://d0qgjv46qmy6l" path="res://Scenes/Skill Menu/Skill Menu.tscn" id="3_utv17"]
 
 [node name="Game" type="Node2D"]
@@ -9,6 +10,11 @@
 [node name="PlayerCharacter" type="Node" parent="."]
 script = ExtResource("1_xr1kb")
 job = ExtResource("2_mxxni")
+
+[node name="PlayerCharacter2" type="Node" parent="."]
+script = ExtResource("1_xr1kb")
+char_name = "Sophia"
+job = ExtResource("3_ft244")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

@@ -8,25 +8,32 @@
 [ext_resource type="Resource" uid="uid://c3kard8gwxb4k" path="res://Game Data/PC Jobs/Job Skills/Druid/Druid Screech.tres" id="5_kswdd"]
 
 [node name="Druid Skill Tree" type="Control"]
+custom_minimum_size = Vector2(900, 1000)
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 3.0
-offset_right = 3.0
+offset_left = -450.0
+offset_top = -1080.0
+offset_right = 450.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 script = ExtResource("1_or2ji")
 
 [node name="Piercing Root" parent="." instance=ExtResource("2_nmme2")]
 layout_mode = 1
-anchors_preset = 2
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 150.0
+offset_left = -32.0
 offset_top = -74.0
-offset_right = 214.0
+offset_right = 32.0
 offset_bottom = -10.0
+grow_horizontal = 2
 grow_vertical = 0
 associated_skill = ExtResource("3_kliso")
 
@@ -40,10 +47,9 @@ associated_skill = ExtResource("4_7j7ks")
 
 [node name="Bark Skin" parent="Piercing Root/Seed Bomb" instance=ExtResource("2_nmme2")]
 layout_mode = 0
-offset_left = 142.0
-offset_top = -1.0
-offset_right = 206.0
-offset_bottom = 63.0
+offset_left = 118.0
+offset_right = 182.0
+offset_bottom = 64.0
 associated_skill = ExtResource("5_8u8x6")
 
 [node name="Screech" parent="Piercing Root" instance=ExtResource("2_nmme2")]

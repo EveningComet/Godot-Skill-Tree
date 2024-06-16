@@ -71,7 +71,7 @@ grow_vertical = 2
 follow_focus = true
 
 [node name="Tree Container" type="Control" parent="ScrollContainer"]
-custom_minimum_size = Vector2(1000, 1000)
+custom_minimum_size = Vector2(900, 1080)
 layout_mode = 2
 size_flags_horizontal = 0
 

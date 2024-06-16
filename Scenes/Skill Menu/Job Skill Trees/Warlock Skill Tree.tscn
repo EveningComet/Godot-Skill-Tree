@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtu2c4gbs8vas"]
+
+[ext_resource type="Script" path="res://Scripts/UI/Skil Menu/SkillTree.gd" id="1_ts42b"]
+[ext_resource type="PackedScene" uid="uid://1ls8oloyl225" path="res://Scenes/Skill Menu/Skill Node.tscn" id="2_a4r40"]
+[ext_resource type="Resource" uid="uid://c1ncuicrqwc03" path="res://Game Data/PC Jobs/Job Skills/Warlock/Warlock Spooky Blast.tres" id="3_bgv58"]
+
+[node name="Warlock Skill Tree" type="Control"]
+custom_minimum_size = Vector2(900, 1080)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_ts42b")
+
+[node name="Spooky Blast" parent="." instance=ExtResource("2_a4r40")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -74.0
+offset_right = 32.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+associated_skill = ExtResource("3_bgv58")

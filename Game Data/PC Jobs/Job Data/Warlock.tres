@@ -1,8 +1,12 @@
-[gd_resource type="Resource" script_class="Job" load_steps=2 format=3 uid="uid://b3gdkx1wumxpo"]
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://b3gdkx1wumxpo"]
 
 [ext_resource type="Script" path="res://Scripts/Character/Job.gd" id="1_5xfpp"]
+[ext_resource type="Resource" uid="uid://c1ncuicrqwc03" path="res://Game Data/PC Jobs/Job Skills/Warlock/Warlock Spooky Blast.tres" id="2_6yhmq"]
 
 [resource]
 script = ExtResource("1_5xfpp")
 localization_name = "Warlock"
 localization_description = "Arcane masters."
+file_path_to_job_skills = "res://Game Data/PC Jobs/Job Skills/Warlock/"
+update_attached_skills = false
+skills = Array[Resource("res://Scripts/Skill Data/SkillData.gd")]([ExtResource("2_6yhmq")])
