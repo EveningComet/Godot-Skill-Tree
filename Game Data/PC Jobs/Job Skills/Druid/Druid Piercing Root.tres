@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SkillData" load_steps=6 format=3 uid="uid://drxkd14vevofe"]
+[gd_resource type="Resource" script_class="SkillData" load_steps=14 format=3 uid="uid://drxkd14vevofe"]
 
 [ext_resource type="Script" path="res://Scripts/Skill Data/SkillData.gd" id="1_72toh"]
 [ext_resource type="Texture2D" uid="uid://dhol0belop6vm" path="res://Imported Assets/Captaincatsparrow Druid Free Icons/Druid_7.png" id="1_qgub6"]
@@ -12,13 +12,45 @@ power_scale = 1.0
 script = ExtResource("3_njyu0")
 power_scale = 1.1
 
+[sub_resource type="Resource" id="Resource_n0kcc"]
+script = ExtResource("3_njyu0")
+power_scale = 1.2
+
+[sub_resource type="Resource" id="Resource_2000g"]
+script = ExtResource("3_njyu0")
+power_scale = 1.3
+
+[sub_resource type="Resource" id="Resource_j8fro"]
+script = ExtResource("3_njyu0")
+power_scale = 1.5
+
+[sub_resource type="Resource" id="Resource_7lg1i"]
+script = ExtResource("3_njyu0")
+power_scale = 1.6
+
+[sub_resource type="Resource" id="Resource_vwlwf"]
+script = ExtResource("3_njyu0")
+power_scale = 1.7
+
+[sub_resource type="Resource" id="Resource_w448c"]
+script = ExtResource("3_njyu0")
+power_scale = 1.8
+
+[sub_resource type="Resource" id="Resource_7q4uh"]
+script = ExtResource("3_njyu0")
+power_scale = 1.9
+
+[sub_resource type="Resource" id="Resource_k46y7"]
+script = ExtResource("3_njyu0")
+power_scale = 2.0
+
 [resource]
 script = ExtResource("1_72toh")
 localization_name = "Piercing Root"
 localization_description = "A root that can cut through a target."
 display_icon = ExtResource("1_qgub6")
 is_passive = false
-tiers = Array[ExtResource("3_njyu0")]([SubResource("Resource_w8ox1"), SubResource("Resource_1abe0")])
+tiers = Array[ExtResource("3_njyu0")]([SubResource("Resource_w8ox1"), SubResource("Resource_1abe0"), SubResource("Resource_n0kcc"), SubResource("Resource_2000g"), SubResource("Resource_j8fro"), SubResource("Resource_7lg1i"), SubResource("Resource_vwlwf"), SubResource("Resource_w448c"), SubResource("Resource_7q4uh"), SubResource("Resource_k46y7")])
 is_starting_skill = true
 minimum_rank_of_previous = 0
 unlocks_at_class_level = 0

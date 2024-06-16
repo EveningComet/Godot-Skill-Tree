@@ -25,6 +25,7 @@ const implements = [preload("res://Scripts/UI/Skil Menu/UIUpgradable.gd")]
 var skill_instance: SkillInstance
 
 func _ready() -> void:
+	get_tree().root.size_changed.connect( on_resolution_changed )
 	set_associated_skill(associated_skill)
 	if get_parent() is SkillNode:
 		draw_point_to(get_parent().global_position + size / 2)
@@ -65,6 +66,12 @@ func turn_on() -> void:
 ## Works as a mediator to handle upgrades.
 func on_skill_button_down() -> void:
 	upgraded.emit(self)
+
+## Fired when the viewport size changes.
+func on_resolution_changed() -> void:
+	if line_2d.points.size() > 0:
+		line_2d.set_point_position(0, global_position + size / 2)
+		line_2d.set_point_position(1, get_parent().global_position + size / 2)
 
 func upgrade() -> void:
 	if skill_instance.is_max_rank() == true:
