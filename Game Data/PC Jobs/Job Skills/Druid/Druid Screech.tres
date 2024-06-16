@@ -7,14 +7,17 @@
 [sub_resource type="Resource" id="Resource_yvwh7"]
 script = ExtResource("3_i6bo3")
 power_scale = 1.0
+stat_modifiers = Array[Resource("res://Scripts/Character/Stats/StatModifier.gd")]([])
 
 [sub_resource type="Resource" id="Resource_wmjxi"]
 script = ExtResource("3_i6bo3")
 power_scale = 1.0
+stat_modifiers = Array[Resource("res://Scripts/Character/Stats/StatModifier.gd")]([])
 
 [sub_resource type="Resource" id="Resource_64kpu"]
 script = ExtResource("3_i6bo3")
 power_scale = 1.0
+stat_modifiers = Array[Resource("res://Scripts/Character/Stats/StatModifier.gd")]([])
 
 [resource]
 script = ExtResource("1_7bf7j")

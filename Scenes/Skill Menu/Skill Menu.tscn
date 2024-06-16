@@ -10,7 +10,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_22mhn")
-skill_tree_holder = NodePath("ScrollContainer")
+skill_tree_holder = NodePath("ScrollContainer/Tree Container")
 skill_points_value_label = NodePath("HBoxContainer/Skill Points Value Label")
 undo_skill_points_button = NodePath("Undo Skill Points Button")
 
@@ -69,8 +69,11 @@ offset_right = 910.0
 offset_bottom = 300.0
 grow_vertical = 2
 follow_focus = true
-horizontal_scroll_mode = 3
-vertical_scroll_mode = 3
+
+[node name="Tree Container" type="Control" parent="ScrollContainer"]
+custom_minimum_size = Vector2(1000, 1000)
+layout_mode = 2
+size_flags_horizontal = 0
 
 [node name="SkillMenuUpgradeHandler" type="Node" parent="."]
 script = ExtResource("2_b0v3k")

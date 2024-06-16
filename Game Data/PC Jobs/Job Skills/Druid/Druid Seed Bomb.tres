@@ -7,6 +7,7 @@
 [sub_resource type="Resource" id="Resource_v3rqk"]
 script = ExtResource("3_3uudx")
 power_scale = 1.0
+stat_modifiers = Array[Resource("res://Scripts/Character/Stats/StatModifier.gd")]([])
 
 [resource]
 script = ExtResource("2_hvbmc")
