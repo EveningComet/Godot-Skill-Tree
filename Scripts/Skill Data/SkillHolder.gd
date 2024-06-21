@@ -36,14 +36,34 @@ func initialize_skill_instances(new_skills: Array[SkillData]) -> void:
 		skill_instance.rank_changed.connect( on_skill_rank_changed )
 
 func on_skill_rank_changed(changed_skill: SkillInstance) -> void:
-	if OS.is_debug_build() == true:
-		print("SkillHolder :: %s has the skill (%s) being changed to rank: %s" % [char.name, changed_skill.skill.localization_name, changed_skill.curr_rank])
-	
 	# Make the necessary stat changes
 	var previous_rank: int = skills[changed_skill]
 	var target_rank:   int = changed_skill.curr_rank
+	var tiers: Array[SkillTier] = changed_skill.skill.tiers
 	if target_rank > previous_rank:
-		pass
+		print("SkillHolder :: Target rank is: ", target_rank)
+		for i in range(0, target_rank):
+			var tier: SkillTier = changed_skill.skill.tiers[i]
+			if tier.stat_modifiers.size() > 0:
+				for mod: StatModifier in tier.stat_modifiers:
+					char.stats.remove_modifier(mod.stat_changing, mod)
+		
+		# Apply the proper stat upgrade
+		var curr_tier: SkillTier = changed_skill.skill.get_tier(target_rank)
+		if curr_tier.stat_modifiers.size() > 0:
+			for mod: StatModifier in curr_tier.stat_modifiers:
+				char.stats.add_modifier(mod.stat_changing, mod)
+	
 	elif target_rank < previous_rank:
-		pass
+		var total_tiers: int = changed_skill.skill.tiers.size()
+		var i: int = total_tiers - 1
+		while i >= target_rank:
+			var tier: SkillTier = tiers[i]
+			if tier.stat_modifiers.size() > 0:
+				for mod: StatModifier in tier.stat_modifiers:
+					char.stats.remove_modifier(mod.stat_changing, mod)
+			i -= 1
+		
+		# Apply the proper stat change
+		
 	skills[changed_skill] = target_rank

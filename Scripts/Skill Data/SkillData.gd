@@ -26,3 +26,7 @@ var max_rank: int:
 
 func execute(user, targets) -> void:
 	pass
+
+## Return a tier.
+func get_tier(upgrade_level: int) -> SkillTier:
+	return tiers[upgrade_level - 1]
