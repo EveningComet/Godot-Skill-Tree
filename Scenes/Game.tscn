@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Character/PlayerCharacter.gd" id="1_xr1kb"]
 [ext_resource type="Resource" uid="uid://dprkbjdufthk4" path="res://Game Data/PC Jobs/Job Data/Druid.tres" id="2_mxxni"]
 [ext_resource type="Resource" uid="uid://b3gdkx1wumxpo" path="res://Game Data/PC Jobs/Job Data/Warlock.tres" id="3_ft244"]
-[ext_resource type="PackedScene" uid="uid://d0qgjv46qmy6l" path="res://Scenes/Skill Menu/Skill Menu.tscn" id="3_utv17"]
+[ext_resource type="PackedScene" uid="uid://d0qgjv46qmy6l" path="res://Scenes/UI/Skill Menu/Skill Menu.tscn" id="3_utv17"]
 
 [node name="Game" type="Node2D"]
 

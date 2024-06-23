@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dtu2c4gbs8vas"]
 
 [ext_resource type="Script" path="res://Scripts/UI/Skil Menu/SkillTree.gd" id="1_ts42b"]
-[ext_resource type="PackedScene" uid="uid://1ls8oloyl225" path="res://Scenes/Skill Menu/Skill Node.tscn" id="2_a4r40"]
+[ext_resource type="PackedScene" uid="uid://1ls8oloyl225" path="res://Scenes/UI/Skill Menu/Skill Node.tscn" id="2_a4r40"]
 [ext_resource type="Resource" uid="uid://c1ncuicrqwc03" path="res://Game Data/PC Jobs/Job Skills/Warlock/Warlock Spooky Blast.tres" id="3_bgv58"]
 
 [node name="Warlock Skill Tree" type="Control"]

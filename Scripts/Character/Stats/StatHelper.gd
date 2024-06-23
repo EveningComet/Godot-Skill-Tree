@@ -8,6 +8,12 @@ enum StatTypes {
 	Intelligence,
 	Wisdom,
 	
+	# Vitals
+	MaxHP,
+	CurrentHP,
+	MaxSP,
+	CurrentSP,
+	
 	# Defense / Resistances
 	Defense,
 	FireRes,

@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://cce3v7msd3m5o"]
+
+[ext_resource type="Script" path="res://Scripts/UI/General/StatDisplayer.gd" id="1_47d3y"]
+
+[node name="Stat Displayer" type="HBoxContainer" node_paths=PackedStringArray("name_displayer", "value_displayer")]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 5
+script = ExtResource("1_47d3y")
+name_displayer = NodePath("Name")
+value_displayer = NodePath("Value")
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Stat Name"
+
+[node name="Value" type="Label" parent="."]
+custom_minimum_size = Vector2(50, 25)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "42"
+horizontal_alignment = 1
